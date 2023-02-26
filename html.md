@@ -1,5 +1,14 @@
- DOMAIN:
+###Git Hub Commands
+`git add .`
+--> Add tất cả những thay đổi vào service
 
+`git commit -m 'phong dang ahihi'`
+--> Ghi description cho service
+
+`git push origin master`
+--> Đẩy service lên nhánh master của cloud
+
+###HTML
 Cấu trúc của mỗi câu lệnh:
 Mở thẻ + attribute + = + "value" + đóng thẻ
 
@@ -11,10 +20,10 @@ td = table data (nội dung trong ô)
 Để merge các hàng với nhau dùng rowspan="số lượng hàng merge"
 
 2.	LIST:
-*List đánh số thứ tự: <ol>
+*List đánh số thứ tự: `<ol>`
 
-*List ko đánh số thứ tự: <ul>
-Mở đầu bằng thẻ <ul>, mỗi item mở đầu bằng thẻ <li>
+*List ko đánh số thứ tự: `<ul>`
+Mở đầu bằng thẻ `<ul>`, mỗi item mở đầu bằng thẻ `<li>`
 Trong mỗi item của list có thể chứa các list khác:
 	Ví dụ:
 
@@ -28,8 +37,10 @@ Trong mỗi item của list có thể chứa các list khác:
 		<li> Trà</li>
 		</ul>
 
-*List có mô tả gồm: <dl> description list (tên của list), <dt> description the term (tên từng item) 
-	và <dd> descible list (mô tả của từng item)
+*List có mô tả gồm: 
+`<dl>` description list (tên của list), 
+`<dt>` description the term (tên từng item) 
+	và `<dd>` descible list (mô tả của từng item)
 Ví dụ:		
 		TRÀ --> dl
 	Trà sen vàng --> dt
@@ -38,13 +49,6 @@ Ví dụ:
 		-trà + thạch đào --> dd
 
 
-git add .
---> Add tất cả những thay đổi vào service
 
-git commit -m 'phong dang ahihi'
---> Ghi description cho service
 
-git push origin master
---> Đẩy service lên nhánh master của cloud
 
-phong dhihih
