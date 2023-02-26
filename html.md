@@ -17,6 +17,7 @@ td = table data (nội dung trong ô)
 Mở đầu bằng thẻ <ul>, mỗi item mở đầu bằng thẻ <li>
 Trong mỗi item của list có thể chứa các list khác:
 	Ví dụ:
+
 		<ul>
 		<li> Cà phơ 
 			<ul>
@@ -26,7 +27,6 @@ Trong mỗi item của list có thể chứa các list khác:
 		<li>
 		<li> Trà</li>
 		</ul>
-
 
 *List có mô tả gồm: <dl> description list (tên của list), <dt> description the term (tên từng item) 
 	và <dd> descible list (mô tả của từng item)
