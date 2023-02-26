@@ -36,3 +36,15 @@ Ví dụ:
 		-trà + hạt sen --> dd
 	Trà thạch đào --> dt
 		-trà + thạch đào --> dd
+
+
+git add .
+--> Add tất cả những thay đổi vào service
+
+git commit -m 'phong dang ahihi'
+--> Ghi description cho service
+
+git push origin master
+--> Đẩy service lên nhánh master của cloud
+
+phong dhihih
