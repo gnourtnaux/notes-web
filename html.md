@@ -3,7 +3,7 @@
 `git add .`
 --> Add tất cả những thay đổi vào service
 
-`git commit -m 'phong dang ahihi'`
+`git commit -m "description"`
 --> Ghi description cho service
 
 `git push origin master`
