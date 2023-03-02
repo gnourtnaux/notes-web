@@ -3,38 +3,66 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-.child-00 {
-  color: red;
-  border: 1px solid gray;
-  margin: 10px;
-  padding: 10px;
-  width: 20px;
-  height: 300px;
-  float: right;
-  background-color: blue;
-}
-.parent-01 {
-  width: 186px;
-  background-color: yellowgreen;
-  height: 2000px;
+  background-color: rgb(38, 0, 255);
 }
 
-.phong {
+
+.b1 {
   float: left;
-  background-color: #fff;
+  background-color:
 }
-.phong.r1 {
+.b1.r1 {
   height: 100px;
   width: 100%;
 }
-.r1h1 {
+.r1c1 {
   width: 30%;
   height: 100%;
+  color: #fff;
+  background-color: rgb(38, 0, 255);
 }
-.r1h2 {
+.r1c2 {
   width: 70%;
   height: 100%;
-  background-color: red;
+  background-color: rgb(54, 156, 197);
+  color: #fff;
 }
 
+.r2{
+  background-color:  rgb(38, 0, 255);
+  height: 1000px;
+  width: 100%;
+}
+
+.r2 .c1{
+  background-color: aqua;
+  height:100% ;
+  width: 27%;
+}
+
+.r2 .c1 .t{
+  height: 10%;
+  width: fit-content;
+  background-color: aqua;
+  color: black;
+  margin: 10px 10%;
+}
+.r2 .c1 .a{
+  height: 25%;
+  width: 80%;
+  background-color: red;
+  margin: 10px 10%;
+}
+
+.r2 .c1 .b{
+  margin: 10px 10%;
+  height: 25%;
+  width: 80%;
+  background-color: red;
+}
+.r2 .c1 .c{
+  margin: 10px 10%;
+  height: 25%;
+  width: 80%;
+  background-color: red;
+}
