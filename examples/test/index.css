@@ -7,10 +7,7 @@ html {
 }
 
 
-.b1 {
-  float: left;
-  background-color:
-}
+
 .b1.r1 {
   height: 100px;
   width: 100%;
@@ -28,39 +25,39 @@ html {
   color: #fff;
 }
 
-.r2{
-  background-color:  rgb(38, 0, 255);
+.r2 {
+  background-color: rgb(38, 0, 255);
   height: 1000px;
   width: 100%;
 }
 
-.r2 .c1{
+.r2 .c1 {
   background-color: aqua;
-  height:100% ;
+  height: 100%;
   width: 27%;
 }
 
-.r2 .c1 .t{
+.r2 .c1 .t {
   height: 10%;
   width: fit-content;
   background-color: aqua;
   color: black;
   margin: 10px 10%;
 }
-.r2 .c1 .a{
+.r2 .c1 .a {
   height: 25%;
   width: 80%;
   background-color: red;
   margin: 10px 10%;
 }
 
-.r2 .c1 .b{
+.r2 .c1 .b {
   margin: 10px 10%;
   height: 25%;
   width: 80%;
   background-color: red;
 }
-.r2 .c1 .c{
+.r2 .c1 .c {
   margin: 10px 10%;
   height: 25%;
   width: 80%;
