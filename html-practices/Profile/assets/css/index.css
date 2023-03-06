@@ -1,0 +1,103 @@
+@font-face {
+  font-family: Sarina-Regular;
+  src: url("../fonts/Sarina-Regular.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/static/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: Montserrat-Truong;
+  src: url("../fonts/static/Montserrat-Bold.ttf");
+}
+
+html {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat-Regular";
+}
+
+.main {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+}
+
+/* Intro  */
+.main__intro {
+  width: 100%;
+  display: flex;
+}
+
+.h1 {
+  font-size: 64px;
+}
+
+.intro__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 4;
+}
+.info__des {
+  font-size: 1rem;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding-left: 12px;
+}
+.intro__avatar {
+  flex-grow: 1;
+}
+.info__name {
+  font-family: "Sarina-Regular";
+  gap: 5px;
+}
+.info__des {
+  gap: 5px;
+}
+
+.avatar__size {
+  height: 149.3px;
+  width: 149.3px;
+  border-radius: 9999px;
+}
+
+/* Skills  */
+.main__skill {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  font-family: "Montserrat-Truong", "Arial";
+}
+.list__name {
+  padding: 16px;
+  border: solid;
+  display: flex;
+  width: 283px;
+  background-color: rgb(247, 243, 243);
+  border-width: 0.1px;
+  display: flex;
+  justify-content: flex-start;
+}
+.name__text {
+  margin-left: 12px;
+  display: flex;
+  align-items: center;
+  font-weight: 1000px;
+}
+.h3 {
+  font-size: 24px;
+}
+.name__logo {
+  gap: 2;
+}
+.name__text {
+  font-weight: 900;
+}
+.logo__size {
+  height: 40x;
+  width: 40px;
+}
