@@ -26,3 +26,6 @@ Trong đó direction chỉ hướng vector mà các thẻ sẽ dính vào
     ==> sẽ thành <div3><div2><div1>
 
 Lưu ý là chỉ nhảy khối khi width của thẻ cha chứa đủ width thẻ con
+
+Align-item => căn theo chiều dọc
+justify-content => căn theo chiều ngang
