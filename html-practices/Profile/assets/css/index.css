@@ -1,6 +1,6 @@
 @font-face {
   font-family: Sarina-Regular;
-  src: url("../fonts/Sarina-Regular.ttf");
+  src: url("../fonts/static/Sarina-Regular.ttf");
 }
 
 @font-face {
@@ -24,6 +24,7 @@ html {
   display: flex;
   margin: auto;
   flex-direction: column;
+  gap:200px;
 }
 
 /* Intro  */
@@ -33,7 +34,11 @@ html {
 }
 
 .h1 {
-  font-size: 64px;
+  font-size: 64px; 
+  font-family: "Sarina-Regular","Arial";
+}
+.h6{
+  padding-right: 50px;
 }
 
 .intro__info {
@@ -52,7 +57,7 @@ html {
   flex-grow: 1;
 }
 .info__name {
-  font-family: "Sarina-Regular";
+ 
   gap: 5px;
 }
 .info__des {
@@ -72,13 +77,18 @@ html {
   gap: 32px;
   font-family: "Montserrat-Truong", "Arial";
 }
+.list__name:hover{
+  background-color: rgba(187, 199, 223, 0.318);
+}
 .list__name {
   padding: 16px;
   border: solid;
   display: flex;
-  width: 283px;
-  background-color: rgb(247, 243, 243);
+  width: 256px;
+  background-color: rgb(249, 251, 255);
   border-width: 0.1px;
+  border-color: rgb(197, 197, 235);
+  border-radius: 2px;
   display: flex;
   justify-content: flex-start;
 }
@@ -100,4 +110,15 @@ html {
 .logo__size {
   height: 40x;
   width: 40px;
+} 
+
+.skill__list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* Recent Posts  */
+.post__title{
+  font-family:"Montserrat-Truong", "Arial";
 }
