@@ -29,3 +29,5 @@ Lưu ý là chỉ nhảy khối khi width của thẻ cha chứa đủ width th�
 
 Align-item => căn theo chiều dọc
 justify-content => căn theo chiều ngang
+
+Chia tỉ lệ các phần tử con trong một phần tử cha sao cho tổng tỉ lệ của chúng bằng 12
