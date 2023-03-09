@@ -1,0 +1,60 @@
+1 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopage</title>
+    <link rel="stylesheet" href=".//assets/css/overview.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="grid grid-cols-12 bg-indigo-500">
+      <!-- Header left -->
+      <div class="col-span-4 grid grid-cols-12">
+        <!-- Left left  -->
+        <div class="col-span-9 grid grid-rows-2">
+          <div class="grid grid-cols-12">
+            <div class="col-span-4">Pages</div>
+            <div>Overview</div>
+          </div>
+          <div>Overview</div>
+        </div>
+        <!-- More button  -->
+        <div class="col-span-2 justify-self-center">
+          <img src="./assets/images/more button image.png" alt="More button" />
+        </div>
+      </div>
+      <!-- Header right -->
+      <div class="col-span-8">
+        <div>Type here</div>
+        <div>Sign in</div>
+      </div>
+    </div>
+
+    <!-- Updates -->
+    <div></div>
+
+    <!-- Chart  -->
+  </body>
+</html>
