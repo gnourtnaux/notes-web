@@ -1,11 +1,10 @@
-1 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shopage</title>
-    <link rel="stylesheet" href=".//assets/css/overview.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -26,35 +25,66 @@
       }
     </style>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://kit.fontawesome.com/2e2ec984fa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/overview.css">
+    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons/themify-icons.css">
   </head>
   <body>
-    <!-- Header -->
-    <div class="grid grid-cols-12 bg-indigo-500">
-      <!-- Header left -->
-      <div class="col-span-4 grid grid-cols-12">
-        <!-- Left left  -->
-        <div class="col-span-9 grid grid-rows-2">
-          <div class="grid grid-cols-12">
-            <div class="col-span-4">Pages</div>
-            <div>Overview</div>
-          </div>
-          <div>Overview</div>
-        </div>
-        <!-- More button  -->
-        <div class="col-span-2 justify-self-center">
-          <img src="./assets/images/more button image.png" alt="More button" />
-        </div>
-      </div>
-      <!-- Header right -->
-      <div class="col-span-8">
-        <div>Type here</div>
-        <div>Sign in</div>
-      </div>
+    <!-- Side -->
+    <div class="grid grid-cols-12">
+      <!-- Left side  -->
+      <div class="col-span-1 mx-4 bg-gray-200">Cột trái nè</div>
+      <!-- Main side  -->
+  <div class="col-span-11 grid grid-rơws-3">
+    <!-- Header bar -->
+<div class="h-24 bg-indigo-300 grid grid-cols-12">
+  <div class="col-span-2 grid grid-rows-2 self-center pl-4">
+    <div>
+      <i class=" float-left fa-solid fa-gift"></i>
+      <div class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"></div>
+      <div class="float-left">Pages</div>
+      <div class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"></div>
+      <div class="float-left">Overview</div>   
     </div>
+    <div class="">Overview</div>
+  </div>
+  <div class="col-span self-center">
+    <i class="fa-solid fa-bars"></i>
+  </div>
+  <div class="col-span-9">
+    <div class="mt-5"><div class="float-right mx-2 "><i class="fa-solid fa-bell"></i></div>
+    <div class="float-right mx-2">
+      <i class="fa-solid fa-gear"></i>
+    </div> 
+    <div class="float-right"> Sign in</div>
+    <div class="float-right">
+      <i class="fa-solid fa-user"></i>
+    </div></div>
+    
+    <div class="float-right">
+    <form action="/action_page.php">
+        <i class="ti-search bg-white"></i>
+          <input class="border-none rounded-md" type="text" placeholder="Type hear..." name="search">
+        
+      </form>
+    </div>
+    
+   
+  </div>
+</div>
 
-    <!-- Updates -->
-    <div></div>
 
-    <!-- Chart  -->
+    <!-- Update bar -->
+<div class="h-48 bg-violet-500">2</div>
+
+<!-- Chart bar  -->
+<div class="h-96 bg-gray-700">3</div>
+
+  </div>
+     
+    </div>
+  </div>
+    </div>
+    
   </body>
 </html>
