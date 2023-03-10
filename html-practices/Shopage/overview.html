@@ -25,80 +25,136 @@
       }
     </style>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script src="https://kit.fontawesome.com/2e2ec984fa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./assets/css/overview.css">
-    <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons/themify-icons.css">
+    <script
+      src="https://kit.fontawesome.com/2e2ec984fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./assets/css/overview.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons/themify-icons.css"
+    />
   </head>
-  <body>
-    <!-- Side -->
-    <div class="grid grid-cols-12">
-      <!-- Left side  -->
-      <div class="col-span-1 mx-4 bg-gray-200">Cột trái nè</div>
-      <!-- Main side  -->
-  <div class="col-span-11 grid grid-rơws-3">
-    <!-- Header bar -->
-<div class="h-24 bg-indigo-300 grid grid-cols-12 text-white">
-  <div class="col-span-2 grid grid-rows-2 self-center pl-4">
-    <div>
-      <i class=" float-left fa-solid fa-gift"></i>
-      <div class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"></div>
-      <div class="float-left">Pages</div>
-      <div class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"></div>
-      <div class="float-left">Overview</div>   
-    </div>
-    <div class="">Overview</div>
-  </div>
-  <div class="col-span self-center">
-    <i class="fa-solid fa-bars"></i>
-  </div>
-  <div class="col-span-9 self-center text-white mr-2">
-    <div class="float-right mx-2 mt-2"><i class="fa-solid fa-bell"></i></div>
-    <div class="float-right mx-2 mt-2">
-      <i class="fa-solid fa-gear"></i>
-    </div> 
-    <div class="float-right mx-2 mt-2"> Sign in</div>
-    <div class="float-right mx-2 mt-2">
-      <i class="fa-solid fa-user"></i>
-    </div>
-    <div class="float-right">
-    <form action="/action_page.php">
-      <i class="fa-solid fa-magnifying-glass"></i>
-          <input class="border-none rounded-md" type="text" placeholder="Type hear..." name="search">
-      </form>
-    </div>
-  </div>
-</div>
-
-
-    <!-- Update bar -->
-<div class="h-48 bg-violet-500 grid grid-cols-3 place-content-center">
-    <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
-      <div class="grid grid-cols-10">
-        <div class="col-span-7 h-28 grid grid-rows-3">
-          <div class="h-1/3">Sales</div>
-          <div class="h-1/3">$230,220</div>
-          <div class="h-1/3 grid grid-flow-col grid-col-2">
-            <div>+55%</div>
-            <div>Since last month</div>
+  <body class="bg-slate-200">
+    <!-- Background  -->
+    <div class="h-80 truong-bg top-0 right-0 left-0 fixed"></div>
+    <!-- Left side  -->
+    <div class="h-screen w-64 bg-white m-4 rounded-xl fixed">Cột trái nè</div>
+    <!-- Main side  -->
+    <div class="relative ml-72 grid grid-rơws-3">
+      <!-- Header bar -->
+      <div class="h-24 grid grid-cols-12 text-white">
+        <div class="col-span-2 grid grid-rows-2 self-center pl-4">
+          <div>
+            <i class="float-left fa-solid fa-gift"></i>
+            <div
+              class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"
+            ></div>
+            <div class="float-left">Pages</div>
+            <div
+              class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"
+            ></div>
+            <div class="float-left">Overview</div>
           </div>
-          
+          <div class="">Overview</div>
         </div>
-        <div class="col-span-3 h-28">6 May - 7 May</div>
+        <div class="col-span self-center">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div
+          class="col-span-9 self-center text-white mr-2 grid grid-flow-col grid-cols-max justify-end gap-3 pr-4"
+        >
+          <form action="/action_page.php">
+            <div class="relative">
+              <div class="absolute text-slate-400 top-2 left-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input
+                class="border-none rounded-md pl-8 text-slate-700"
+                type="text"
+                placeholder="Type here..."
+                name="search"
+              />
+            </div>
+          </form>
 
+          <div class="mt-2 w-fit">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="mt-2 w-fit">Sign In</div>
+
+          <div class="mt-2 w-fit">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="mt-2 w-fit">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+        </div>
       </div>
-    </div>
-    
-     
-</div>
+      <!-- Update bar -->
+      <div class="h-48 grid grid-cols-3 place-content-center -my-3">
+        <!-- Ô 1  -->
+        <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
+          <div class="grid grid-cols-10">
+            <div class="col-span-7 h-28 grid grid-rows-3 p-3">
+              <div class="h-1/3 text-stone-500 font-semibold">SALES</div>
+              <div class="h-1/3 font-bold text-xl text-slate-600">$230,220</div>
+              <div
+                class="h-1/3 grid grid-flow-col grid-col-2 justify-self-start"
+              >
+                <div class="green-t w-10 font-bold">+55%</div>
+                <div class="text-stone-400 pl-2">since last month</div>
+              </div>
+            </div>
+            <div class="col-span-3 h-28 text-stone-400 grid grid-rows-3 p-3">
+              <div class="h-1/3 text-sm justify-self-end">6 May - 7 May</div>
+            </div>
+          </div>
+        </div>
+        <!-- Ô 2 -->
+        <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
+          <div class="grid grid-cols-10">
+            <div class="col-span-7 h-28 grid grid-rows-3 p-3">
+              <div class="h-1/3 text-stone-500 font-semibold">CUSTOMERS</div>
+              <div class="h-1/3 font-bold text-xl text-slate-600">3.200</div>
+              <div
+                class="h-1/3 grid grid-flow-col grid-col-2 justify-self-start"
+              >
+                <div class="green-t w-10 font-bold">+12%</div>
+                <div class="text-stone-400 pl-2">since last month</div>
+              </div>
+            </div>
+            <div class="col-span-3 h-28 text-stone-400 grid grid-rows-3 p-3">
+              <div class="h-1/3 text-sm justify-self-end">6 May - 7 May</div>
+            </div>
+          </div>
+        </div>
+        <!-- Ô 3  -->
+        <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
+          <div class="grid grid-cols-10">
+            <div class="col-span-7 h-28 grid grid-rows-3 p-3">
+              <div class="h-1/3 text-stone-500 font-semibold">AVG.REVENUE</div>
+              <div class="h-1/3 font-bold text-xl text-slate-600">$1.200</div>
+              <div
+                class="h-1/3 grid grid-flow-col grid-col-2 justify-self-start"
+              >
+                <div class="text-stone-400 w-10 font-bold">$213</div>
+                <div class="text-stone-400 pl-2">since last month</div>
+              </div>
+            </div>
+            <div class="col-span-3 h-28 text-stone-400 grid grid-rows-3 p-3">
+              <div class="h-1/3 text-sm justify-self-end">6 May - 7 May</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-<!-- Chart bar  -->
-<div class="h-96 bg-gray-700">3</div>
-
-  </div>
-     
+      <!-- Chart bar  -->
+      <div class="h-96 grid grid-cols-3 place-content-center rounded-xl">
+        <div class="bg-white rounded-2xl gap-y-1 h-96 mx-4">1</div>
+        <div class="col-span-2 bg-white rounded-2xl gap-y-1 h-96 mx-4">2</div>
+      </div>
+      <div class="h-96"></div>
     </div>
-  </div>
-    </div>
-    
   </body>
 </html>
