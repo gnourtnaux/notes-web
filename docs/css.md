@@ -31,3 +31,9 @@ Align-item => căn theo chiều dọc
 justify-content => căn theo chiều ngang
 
 Chia tỉ lệ các phần tử con trong một phần tử cha sao cho tổng tỉ lệ của chúng bằng 12
+
+***********Để căn vị trí các phần tử thì nên bọc Flex và dùng justify-position
+Ex:
+
+    flex justify-start
+    flex justify-center

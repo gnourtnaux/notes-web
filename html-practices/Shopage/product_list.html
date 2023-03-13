@@ -250,51 +250,48 @@
       </div>
 
       <!-- Main side--Chart bar  -->
-      <div class="h-96 grid grid-cols-3 place-content-center rounded-xl">
-        <!-- Chart bar__left  -->
-        <div class="bg-white rounded-2xl gap-y-1 h-96 mx-4">
-          <div class="grid grid-cols-3">
-            <div class="col-span-2 font-semibold flex justify-start m-4">
-              Channels
-            </div>
-            <a class="block text-2xl flex justify-end m-4" href=""
-              ><i class="fa-solid fa-circle-info"></i>
-            </a>
-          </div>
-
-          <div>
-            <table
-              id="column-example-24"
-              class="charts-css column multiple show-labels data-spacing-10 show-primary-axis show-data-axes"
-            >
-              <caption>
-                Column Example #24
-              </caption>
-              <thead>
-                <tr>
-                  <th scope="col">Year</th>
-                  <th scope="col">Facebook</th>
-                  <th scope="col">Direct</th>
-                  <th scope="col">Organic</th>
-                  <th scope="col">Referral</th>
-              
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row"></th>
-                  <td style="--size: 0.2"></td>
-                  <td style="--size: 0.4"></td>
-                  <td style="--size: 0.6"></td>
-                  <td style="--size: 0.8"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div></div>
-        </div>
-        <!-- Chart bar__right  -->
-        <div class="col-span-2 bg-white rounded-2xl gap-y-1 h-96 mx-4">2</div>
+      <div class="h-96 bg-white place-content-center rounded-xl">
+        <table class="table-fixed m-6">
+          <thead>
+            <tr class="text-xs text-slate-400 font-bold">
+              <th class="w-96 text-left ml-8">PRODUCT</th>
+              <th class="w-32 text-left ml-8">CATEGORY</th>
+              <th class="w-32 text-left ml-8">PRICE</th>
+              <th class="w-32 text-left ml-8">SKU</th>
+              <th class="w-32 text-left ml-8">QUANTITY</th>
+              <th class="w-32 text-left ml-8">STATUS</th>
+              <th class="w-40 text-left ml-8">ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="block flex items-center">
+                <input
+                  type="checkbox"
+                  class="appearance-none checked:bg-blue-500"
+                />
+                <img
+                  class="h-12 w-9"
+                  src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/alchimia-chair.jpg"
+                  alt=""
+                />
+                <div>Alchimia Chair</div>
+              </td>
+              <td class="text-sm leading-normal">Furniture</td>
+              <td class="text-sm leading-normal">$2,999</td>
+              <td class="text-sm leading-normal">113213</td>
+              <td class="text-sm leading-normal">0</td>
+              <td>
+                <div>Out of Stock</div>
+              </td>
+              <td class="flex justify-evenly">
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+                <i class="fa-solid fa-check"></i>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </body>

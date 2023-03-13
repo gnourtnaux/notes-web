@@ -1,27 +1,40 @@
-
 @font-face {
-    font-family:Open Sans ;
-    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+  font-family: Open Sans;
+  src: url(../fonts/OpenSans-VariableFont_wdth\wght.ttf);
 }
-html{
-    padding: 0;
-    margin:0;
+html {
+  padding: 0;
+  margin: 0;
 }
-.leftside-font{
-    font-family:"Open Sans","Arial";
-    height: ;
+.leftside {
+  font-family: "Open Sans", "Arial";
+  height: 95vh;
+  overflow-y: scroll;
 }
-.main{
-    width: 100%;
-    height: 1000px;
-}
-.main-bg{
-    background-color: rgba(94, 114, 228, 1);
-}
-.green-t{
-color: rgb(87 216 161);
+.leftside::-webkit-scrollbar{
+    height: 80%;
+    width: 4px;
+	background-color: #f4f4f4;
+    color: red;
 }
 
-.height{
-    height: 1800px;
+
+.main {
+  width: 100%;
+  height: 1000px;
+}
+.main-bg {
+  background-color: rgba(94, 114, 228, 1);
+}
+.green-t {
+  color: rgb(87 216 161);
+}
+
+.height {
+  height: 1800px;
+}
+#column-example-24 {
+  height: 200px;
+  max-width: 300px;
+  margin: 0 auto;
 }

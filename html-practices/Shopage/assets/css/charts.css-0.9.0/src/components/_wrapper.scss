@@ -1,0 +1,83 @@
+/*
+ * Chart wrapper element
+ */
+.charts-css {
+  // Position child elements relative to main chart element
+  position: relative;
+
+  // Not a table anymore
+  display: block;
+
+  // Chart Dimensions
+  width: 100%;
+  height: 100%;
+
+  // Reset
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+
+  // Keep colors in print view
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+
+  &,
+  &::after,
+  &::before,
+  & *,
+  & *::after,
+  & *::before {
+    box-sizing: border-box;
+  }
+}
+
+
+
+/*
+ * Reset table element
+ */
+table.charts-css {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  overflow: initial;
+  background-color: transparent;
+
+  // Reset
+  caption,
+  colgroup,
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    display: block;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+  }
+
+  // Hide unused tags
+  colgroup,
+  thead,
+  tfoot {
+    display: none;
+  }
+}
+
+
+
+/*
+ * Reset list elements
+ */
+ul.charts-css,
+ol.charts-css {
+  list-style-type: none;
+
+  li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+}

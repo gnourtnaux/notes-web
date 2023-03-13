@@ -1,0 +1,20 @@
+/*
+ * Radar Chart
+ */
+.charts-css {
+
+  &.radar {
+
+    // Layout
+    tbody {
+      @include circle();
+
+      background-color: var(--chart-bg-color);
+
+      tr {
+        display: none;
+      }
+    }
+  }
+
+}

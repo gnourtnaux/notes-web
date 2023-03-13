@@ -1,0 +1,186 @@
+/*
+ * Bar Chart
+ */
+.charts-css {
+
+  &.bar {
+
+    // Layout
+    tbody {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+
+      width: 100%;
+      height: calc(100% - var(--heading-size));
+
+      tr {
+        position: relative;
+
+        // Even column size
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+        overflow-wrap: anywhere;
+
+        // Display cells in a column
+        display: flex;
+        justify-content: flex-start;
+
+        th {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+        }
+
+        td {
+          display: flex;
+          align-items: center;
+
+          width: calc(100% * var(--size, 1));
+          height: 100%;
+
+          position: relative; // For tooltips
+        }
+
+      }
+    }
+
+    // Orientation
+    &:not(.reverse) {
+      tbody {
+        tr {
+          align-items: flex-start;
+          margin-inline-start: var(--labels-size);
+
+          th {
+            left: calc(-1 * var(--labels-size) - var(--primary-axis-width));
+            width: var(--labels-size);
+          }
+
+          td {
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+    &.reverse {
+      tbody {
+        tr {
+          align-items: flex-end;
+          margin-inline-end: var(--labels-size);
+
+          th {
+            right: calc(-1 * var(--labels-size) - var(--primary-axis-width));
+            width: var(--labels-size);
+          }
+
+          td {
+            justify-content: flex-start;
+          }
+        }
+      }
+    }
+
+    // Stacked
+    &:not(.stacked) {
+      tbody tr {
+        td {
+          // Even cell size
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: 0;
+        }
+      }
+    }
+    &.stacked {
+      tbody tr {
+        td {
+          flex-grow: unset;
+          flex-shrink: unset;
+          flex-basis: unset;
+        }
+      }
+
+      &.reverse-datasets {
+        tbody tr {
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    // Reverse Order
+    &:not(.reverse-data) {
+      tbody {
+        flex-direction: column;
+      }
+    }
+    &.reverse-data {
+      tbody {
+        flex-direction: column-reverse;
+      }
+    }
+    &:not(.reverse-datasets) {
+      &:not(.stacked) {
+        tbody tr {
+          flex-direction: column;
+        }
+      }
+
+      &.stacked {
+        &:not(.reverse) {
+          tbody tr {
+            flex-direction: row;
+          }
+        }
+
+        &.reverse {
+          tbody tr {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+    &.reverse-datasets {
+      &:not(.stacked) {
+        tbody tr {
+          flex-direction: column-reverse;
+        }
+      }
+
+      &.stacked {
+        &:not(.reverse) {
+          tbody tr {
+            flex-direction: row-reverse;
+          }
+        }
+
+        &.reverse {
+          tbody tr {
+            flex-direction: row;
+          }
+        }
+      }
+    }
+
+    // Spacing
+    @for $i from 1 through 20 {
+      &.data-spacing-#{$i} {
+        tbody tr {
+          padding-block-start: $i * 1px;
+          padding-block-end: $i * 1px;
+        }
+      }
+    }
+    @for $i from 1 through 20 {
+      &.datasets-spacing-#{$i} {
+        tbody tr td {
+          margin-block-start: $i * 1px;
+          margin-block-end: $i * 1px;
+        }
+      }
+    }
+
+  }
+
+}
