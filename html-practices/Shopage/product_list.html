@@ -46,6 +46,7 @@
       rel="stylesheet"
       href="./assets/css/charts.css-0.9.0/dist/charts.min.css"
     />
+    <link rel="stylesheet" href="./assets/css/product_list.css" />
   </head>
   <body class="bg-slate-200">
     <!-- Background  -->
@@ -252,46 +253,113 @@
       <!-- Main side--Chart bar  -->
       <div class="h-96 bg-white place-content-center rounded-xl">
         <table class="table-fixed m-6">
+          <!-- Table head  -->
           <thead>
-            <tr class="text-xs text-slate-400 font-bold">
-              <th class="w-96 text-left ml-8">PRODUCT</th>
-              <th class="w-32 text-left ml-8">CATEGORY</th>
-              <th class="w-32 text-left ml-8">PRICE</th>
-              <th class="w-32 text-left ml-8">SKU</th>
-              <th class="w-32 text-left ml-8">QUANTITY</th>
-              <th class="w-32 text-left ml-8">STATUS</th>
-              <th class="w-40 text-left ml-8">ACTION</th>
+            <tr class="text-xs text-slate-400 font-bold uppercase">
+              <th class="w-96 text-left ml-8">
+                <span>Product</span>
+                <span></span>
+                <span><i class="fa-solid fa-sort"></i></span>
+              </th>
+              <th class="w-32 text-left ml-8 justify-start">
+                <span>category</span>
+                <span><i class="mx-2 fa-solid fa-sort"></i></span>
+              </th>
+              <th class="w-32 text-left ml-8 justify-start">
+                <span>Price</span>
+                <span><i class="mx-2 fa-solid fa-sort"></i></span>
+              </th>
+              <th class="w-32 text-left ml-8 justify-start">
+                <span>SKU</span>
+                <span><i class="mx-2 fa-solid fa-sort"></i></span>
+              </th>
+              <th class="w-32 text-left ml-8 justify-start">
+                <span>quantity</span>
+                <span><i class="mx-2 fa-solid fa-sort"></i></span>
+              </th>
+              <th class="w-32 text-left ml-8 justify-start">
+                <span>Status</span>
+                <span><i class="mx-2 fa-solid fa-sort"></i></span>
+              </th>
+              <th class="w-32 text-left ml-8 justify-start">
+                <span>action</span>
+                <span><i class="mx-2 fa-solid fa-sort"></i></span>
+              </th>
             </tr>
           </thead>
+          <!-- Table body  -->
           <tbody>
-            <tr>
+            <tr class="text-slate-500">
               <td class="block flex items-center">
                 <input
                   type="checkbox"
-                  class="appearance-none checked:bg-blue-500"
+                  class="appearance-none checked:bg-blue-500 rounded checkbox-color"
                 />
                 <img
-                  class="h-12 w-9"
+                  class="h-9 w-11 ml-7"
                   src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/alchimia-chair.jpg"
                   alt=""
                 />
-                <div>Alchimia Chair</div>
+                <div class="ml-7 font-semibold text-slate-600">
+                  Alchimia Chair
+                </div>
               </td>
               <td class="text-sm leading-normal">Furniture</td>
               <td class="text-sm leading-normal">$2,999</td>
               <td class="text-sm leading-normal">113213</td>
               <td class="text-sm leading-normal">0</td>
               <td>
-                <div>Out of Stock</div>
+                <div>
+                  <span
+                    class="uppercase text-xs font-bold bg-red-200 p-1 rounded-md text-red-800"
+                    >Out of Stock</span
+                  >
+                </div>
               </td>
-              <td class="flex justify-evenly">
-                <i class="fa-solid fa-check"></i>
-                <i class="fa-solid fa-check"></i>
-                <i class="fa-solid fa-check"></i>
+              <td class="flex justify-between">
+                <i class="fa-solid fa-eye"></i>
+                <i class="fa-solid fa-user-pen"></i>
+                <i class="fa-solid fa-trash"></i>
               </td>
             </tr>
           </tbody>
         </table>
+      </div>
+      <div class="bg-slate-700 h-2"></div>
+      <div class="h-96 bg-white place-content-center rounded-xl">
+        <div class="table w-full">
+          <div class="table-header-group">
+            <div class="table-row uppercase text-xs text-slate-400 font-bold">
+              <div class="table-cell">product</div>
+              <div class="table-cell">category</div>
+              <div class="table-cell">price</div>
+              <div class="table-cell">sku</div>
+              <div class="table-cell">quantity</div>
+              <div class="table-cell">status</div>
+              <div class="table-cell">action</div>
+            </div>
+          </div>
+          <div class="table-row-group">
+            <div class="table-row">
+              <div class="table-cell">
+                <div class="flex items-center"><input
+                  type="checkbox"
+                  class="appearance-none checked:bg-blue-500 rounded checkbox-color"
+                />
+                <img
+                  class="h-9 w-11 ml-7"
+                  src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/alchimia-chair.jpg"
+                  alt=""
+                />
+                <div class="ml-7 font-semibold text-slate-600">
+                  Alchimia Chair
+                </div></div>
+                
+              </div>
+              <div class="table-cell ">furniture</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>

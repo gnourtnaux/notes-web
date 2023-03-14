@@ -37,3 +37,5 @@ Ex:
 
     flex justify-start
     flex justify-center
+
+Justify content dùng cho Block, justify item dùng cho Inline 
