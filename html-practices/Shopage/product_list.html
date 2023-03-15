@@ -145,25 +145,25 @@
     <div class="relative ml-72 grid grid-rơws-3">
       <!-- Main side--Header bar -->
       <div class="h-24 grid grid-cols-12 text-white">
-        <div class="col-span-2 grid grid-rows-2 self-center pl-4">
-          <div>
-            <i class="float-left fa-solid fa-gift"></i>
+        <div class="col-span-3 grid grid-rows-2 self-center pl-4">
+          <div class="flex">
+            <i class="items-start fa-solid fa-gift"></i>
             <div
-              class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"
+              class="items-start text-sm pl-2 leading-normal before:items-start before:pr-2 before:text-white before:content-['/']"
             ></div>
-            <div class="float-left">Pages</div>
-            <div
-              class="float-left text-sm pl-2 leading-normal before:float-left before:pr-2 before:text-white before:content-['/']"
-            ></div>
-            <div class="float-left">Overview</div>
+            <span class="items-start text-gray-300">Pages</span>
+            <span
+              class="items-start text-sm pl-2 leading-normal before:items-start before:pr-2 before:text-white before:content-['/']"
+            ></span>
+            <span class="items-start">Products List</span>
           </div>
-          <div class="">Overview</div>
+          <div class="font-bold">Products List</div>
         </div>
         <div class="col-span self-center">
           <i class="fa-solid fa-bars"></i>
         </div>
         <div
-          class="col-span-9 self-center text-white mr-2 grid grid-flow-col grid-cols-max justify-end gap-3 pr-4"
+          class="col-span-8 self-center text-white mr-2 grid grid-flow-col grid-cols-max justify-end gap-3 pr-4"
         >
           <form action="/action_page.php">
             <div class="relative">
@@ -192,172 +192,403 @@
           </div>
         </div>
       </div>
-      <!-- Main side--Update bar -->
-      <div class="h-48 grid grid-cols-3 place-content-center -my-3">
-        <!-- Update bar__Col 1  -->
-        <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
-          <div class="grid grid-cols-10">
-            <div class="col-span-7 h-28 grid grid-rows-3 p-3">
-              <div class="h-1/3 text-stone-500 font-semibold">SALES</div>
-              <div class="h-1/3 font-bold text-xl text-slate-600">$230,220</div>
-              <div
-                class="h-1/3 grid grid-flow-col grid-col-2 justify-self-start"
-              >
-                <div class="green-t w-10 font-bold">+55%</div>
-                <div class="text-stone-400 pl-2">since last month</div>
-              </div>
-            </div>
-            <div class="col-span-3 h-28 text-stone-400 grid grid-rows-3 p-3">
-              <div class="h-1/3 text-sm justify-self-end">6 May - 7 May</div>
-            </div>
-          </div>
-        </div>
-        <!-- Update bar__Col 2 -->
-        <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
-          <div class="grid grid-cols-10">
-            <div class="col-span-7 h-28 grid grid-rows-3 p-3">
-              <div class="h-1/3 text-stone-500 font-semibold">CUSTOMERS</div>
-              <div class="h-1/3 font-bold text-xl text-slate-600">3.200</div>
-              <div
-                class="h-1/3 grid grid-flow-col grid-col-2 justify-self-start"
-              >
-                <div class="green-t w-10 font-bold">+12%</div>
-                <div class="text-stone-400 pl-2">since last month</div>
-              </div>
-            </div>
-            <div class="col-span-3 h-28 text-stone-400 grid grid-rows-3 p-3">
-              <div class="h-1/3 text-sm flex justify-end">6 May - 7 May</div>
-            </div>
-          </div>
-        </div>
-        <!-- Update bar__Col 3  -->
-        <div class="bg-white rounded-2xl gap-y-1 h-28 mx-4">
-          <div class="grid grid-cols-10">
-            <div class="col-span-7 h-28 grid grid-rows-3 p-3">
-              <div class="h-1/3 text-stone-500 font-semibold">AVG.REVENUE</div>
-              <div class="h-1/3 font-bold text-xl text-slate-600">$1.200</div>
-              <div
-                class="h-1/3 grid grid-flow-col grid-col-2 justify-self-start"
-              >
-                <div class="text-stone-400 w-10 font-bold">$213</div>
-                <div class="text-stone-400 pl-2">since last month</div>
-              </div>
-            </div>
-            <div class="col-span-3 h-28 text-stone-400 grid grid-rows-3 p-3">
-              <div class="h-1/3 text-sm justify-self-end">6 May - 7 May</div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- Main side--Chart bar  -->
-      <div class="h-96 bg-white place-content-center rounded-xl">
-        <table class="table-fixed m-6">
-          <!-- Table head  -->
-          <thead>
-            <tr class="text-xs text-slate-400 font-bold uppercase">
-              <th class="w-96 text-left ml-8">
-                <span>Product</span>
-                <span></span>
-                <span><i class="fa-solid fa-sort"></i></span>
-              </th>
-              <th class="w-32 text-left ml-8 justify-start">
-                <span>category</span>
-                <span><i class="mx-2 fa-solid fa-sort"></i></span>
-              </th>
-              <th class="w-32 text-left ml-8 justify-start">
-                <span>Price</span>
-                <span><i class="mx-2 fa-solid fa-sort"></i></span>
-              </th>
-              <th class="w-32 text-left ml-8 justify-start">
-                <span>SKU</span>
-                <span><i class="mx-2 fa-solid fa-sort"></i></span>
-              </th>
-              <th class="w-32 text-left ml-8 justify-start">
-                <span>quantity</span>
-                <span><i class="mx-2 fa-solid fa-sort"></i></span>
-              </th>
-              <th class="w-32 text-left ml-8 justify-start">
-                <span>Status</span>
-                <span><i class="mx-2 fa-solid fa-sort"></i></span>
-              </th>
-              <th class="w-32 text-left ml-8 justify-start">
-                <span>action</span>
-                <span><i class="mx-2 fa-solid fa-sort"></i></span>
-              </th>
-            </tr>
-          </thead>
-          <!-- Table body  -->
-          <tbody>
-            <tr class="text-slate-500">
-              <td class="block flex items-center">
-                <input
-                  type="checkbox"
-                  class="appearance-none checked:bg-blue-500 rounded checkbox-color"
-                />
-                <img
-                  class="h-9 w-11 ml-7"
-                  src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/alchimia-chair.jpg"
-                  alt=""
-                />
-                <div class="ml-7 font-semibold text-slate-600">
-                  Alchimia Chair
-                </div>
-              </td>
-              <td class="text-sm leading-normal">Furniture</td>
-              <td class="text-sm leading-normal">$2,999</td>
-              <td class="text-sm leading-normal">113213</td>
-              <td class="text-sm leading-normal">0</td>
-              <td>
-                <div>
-                  <span
-                    class="uppercase text-xs font-bold bg-red-200 p-1 rounded-md text-red-800"
-                    >Out of Stock</span
-                  >
-                </div>
-              </td>
-              <td class="flex justify-between">
-                <i class="fa-solid fa-eye"></i>
-                <i class="fa-solid fa-user-pen"></i>
-                <i class="fa-solid fa-trash"></i>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="bg-slate-700 h-2"></div>
-      <div class="h-96 bg-white place-content-center rounded-xl">
+      <!-- Main side--Table bar  -->
+      <div class="h-full bg-white place-content-center rounded-xl p-6 m-4">
+        <!-- Table bar__Info  -->
+        <div class="h-48 grid grid-rows-2">
+          <div class="grid grid-cols-3">
+            <div class="col-span-2"><div>All Products</div>
+          <div>A lightweight, extendable, dependency-free javascript HTML table plugin.</div></div>
+          <div class="flex">
+            <span class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md np-color text-white">+ New Product</span>
+            <span class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md port-color">Import</span>
+            <span class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md port-color">Export</span>
+          </div>
+          </div>
+          <div class="grid grid-cols-10">
+            <div class="col-span-8">5 entries per page</div>
+            <div>
+              <input class="rounded-md text-slate-700" type="text" name="search" id="search" placeholder="Search...">
+            </div>
+          </div>
+        </div>
+        <!-- Table bar__Table  -->
         <div class="table w-full">
+          <!-- Table__header  -->
           <div class="table-header-group">
             <div class="table-row uppercase text-xs text-slate-400 font-bold">
-              <div class="table-cell">product</div>
-              <div class="table-cell">category</div>
-              <div class="table-cell">price</div>
-              <div class="table-cell">sku</div>
-              <div class="table-cell">quantity</div>
-              <div class="table-cell">status</div>
-              <div class="table-cell">action</div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>product</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>category</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>price</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>sku</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>quantity</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>status</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <div class="flex justify-between py-4">
+                  <div>action</div>
+                  <i class="fa-solid fa-sort mr-6 self-center"></i>
+                </div>
+              </div>
             </div>
           </div>
+          <!-- Table__body  -->
           <div class="table-row-group">
+            <!-- Table row start  -->
+            <div class="table-row">
+              <div class="table-cell border-b border-gray-300 py-4">
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-11 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/adidas-hoodie.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    BKLGO Full Zip Hoodie
+                  </div>
+                </div>
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 capitalize text-slate-500"
+              >
+                furniture
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                $2,999
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                113213
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                0
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <span
+                  class="uppercase text-xs font-bold bg-red-200 p-1 rounded-md text-red-700"
+                  >Out of Stock</span
+                >
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 text-sm text-slate-500"
+              >
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Table row end  --><!-- Table row start  -->
+            <div class="table-row">
+              <div class="table-cell border-b border-gray-300 py-4">
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-9 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/macbook-pro.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    MacBook Pro
+                  </div>
+                </div>
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 capitalize text-slate-500"
+              >
+                furniture
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                $2,999
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                113213
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                0
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <span
+                  class="uppercase text-xs font-bold bg-red-200 p-1 rounded-md text-red-700"
+                  >Out of Stock</span
+                >
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 text-sm text-slate-500"
+              >
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Table row end  --><!-- Table row start  -->
+            <div class="table-row">
+              <div class="table-cell border-b border-gray-300 py-4">
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-11 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/metro-chair.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    Metro Bar Stool
+                  </div>
+                </div>
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 capitalize text-slate-500"
+              >
+                furniture
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                $2,999
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                113213
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                0
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <span
+                  class="uppercase text-xs font-bold bg-green-200 p-1 rounded-md text-green-600"
+                  >In Stock</span
+                >
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 text-sm text-slate-500"
+              >
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Table row end  --><!-- Table row start  -->
+            <div class="table-row">
+              <div class="table-cell border-b border-gray-300 py-4">
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-9 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/alchimia-chair.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    Alchimia Chair
+                  </div>
+                </div>
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 capitalize text-slate-500"
+              >
+                furniture
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                $2,999
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                113213
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                0
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <span
+                  class="uppercase text-xs font-bold bg-red-200 p-1 rounded-md text-red-700"
+                  >Out of Stock</span
+                >
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 text-sm text-slate-500"
+              >
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Table row end  --><!-- Table row start  -->
+            <div class="table-row">
+              <div class="table-cell border-b border-gray-300 py-4">
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-11 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/fendi-coat.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    Fendi Gradient Coat
+                  </div>
+                </div>
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 capitalize text-slate-500"
+              >
+                furniture
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                $2,999
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                113213
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                0
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <span
+                  class="uppercase text-xs font-bold bg-green-200 p-1 rounded-md text-green-600"
+                  >in Stock</span
+                >
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 text-sm text-slate-500"
+              >
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Table row end  --><!-- Table row start  -->
+            <div class="table-row">
+              <div class="table-cell border-b border-gray-300 py-4">
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-11 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/off-white-jacket.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    Off White Cotton Bomber
+                  </div>
+                </div>
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 capitalize text-slate-500"
+              >
+                furniture
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                $2,999
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                113213
+              </div>
+              <div class="table-cell border-b border-gray-300 text-slate-500">
+                0
+              </div>
+              <div class="table-cell border-b border-gray-300">
+                <span
+                  class="uppercase text-xs font-bold bg-green-200 p-1 rounded-md text-green-600"
+                  >In Stock</span
+                >
+              </div>
+              <div
+                class="table-cell border-b border-gray-300 text-sm text-slate-500"
+              >
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Table row end  --><!-- Table row start  -->
             <div class="table-row">
               <div class="table-cell">
-                <div class="flex items-center"><input
-                  type="checkbox"
-                  class="appearance-none checked:bg-blue-500 rounded checkbox-color"
-                />
-                <img
-                  class="h-9 w-11 ml-7"
-                  src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/alchimia-chair.jpg"
-                  alt=""
-                />
-                <div class="ml-7 font-semibold text-slate-600">
-                  Alchimia Chair
-                </div></div>
-                
+                <div class="flex items-center">
+                  <input
+                    type="checkbox"
+                    class="appearance-none rounded checkbox-color"
+                  />
+                  <img
+                    class="h-11 w-11 ml-7"
+                    src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/soft-ui-design-system/assets/img/ecommerce/yohji-yamamoto.jpg"
+                    alt=""
+                  />
+                  <div class="ml-7 font-semibold text-slate-600">
+                    Y-3 Yohji Yamamoto
+                  </div>
+                </div>
               </div>
-              <div class="table-cell ">furniture</div>
+              <div class="table-cell capitalize text-slate-500">furniture</div>
+              <div class="table-cell text-slate-500">$2,999</div>
+              <div class="table-cell text-slate-500">113213</div>
+              <div class="table-cell text-slate-500">0</div>
+              <div class="table-cell">
+                <span
+                  class="uppercase text-xs font-bold bg-green-200 p-1 rounded-md text-green-600"
+                  >In Stock</span
+                >
+              </div>
+              <div class="table-cell text-sm text-slate-500">
+                <div class="flex justify-between">
+                  <i class="fa-solid fa-eye"></i>
+                  <i class="fa-solid fa-user-pen"></i>
+                  <i class="fa-solid fa-trash"></i>
+                </div>
+              </div>
             </div>
+            <!-- Table row end  -->
           </div>
         </div>
       </div>

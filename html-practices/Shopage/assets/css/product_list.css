@@ -1,3 +1,27 @@
-.checkbox-color:checked{
-    background-color:rgb(102 110 228)
+::-ms-input-placeholder{
+    color:#e7ecf1;
 }
+.checkbox-color:checked{
+    background-color:rgb(117 101 228);
+    width: 20px;
+    height: 20px;
+}
+.checkbox-color:hover{
+    cursor: pointer;
+}
+.fa-eye, .fa-user-pen, .fa-trash, .table-header-group:hover{
+    cursor: pointer;
+}
+.np-color{
+    background-color: rgb(116 101 227);
+}
+
+.port-color{
+color: rgb(94 114 228);
+border: 1px solid rgb(94 114 228) ;
+}
+
+.np-color, .port-color:hover{
+    cursor: pointer;
+}
+
