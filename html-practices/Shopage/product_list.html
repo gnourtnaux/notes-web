@@ -48,7 +48,7 @@
     />
     <link rel="stylesheet" href="./assets/css/product_list.css" />
   </head>
-  <body class="bg-slate-200">
+  <body class="background-color">
     <!-- Background  -->
     <div class="h-80 main-bg top-0 right-0 left-0 fixed"></div>
     <!-- Side  -->
@@ -115,9 +115,9 @@
           <div class="pl-8">Charts</div>
           <div class="pl-8">Sweet Alerts</div>
           <div class="pl-8">Notifications</div>
-          <div class="pl-8 grid grid-cols-2">
-            <div>Virtual Reality</div>
-            <div><i class="fa-solid fa-angle-down"></i></div>
+          <div class="pl-8 grid grid-cols-5">
+            <div class="col-span-4">Virtual Reality</div>
+            <i class="block flex items-center fa-solid fa-angle-down"></i>
           </div>
           <div class="pl-8">CRM</div>
         </div>
@@ -142,9 +142,9 @@
       </div>
     </div>
     <!-- Main side  -->
-    <div class="relative ml-72 grid grid-rơws-3">
+    <div class="relative ml-72 grid grid-rơws-3 pb-4">
       <!-- Main side--Header bar -->
-      <div class="h-24 grid grid-cols-12 text-white">
+      <div class="h-24 grid grid-cols-12 text-white pl-4">
         <div class="col-span-3 grid grid-rows-2 self-center pl-4">
           <div class="flex">
             <i class="items-start fa-solid fa-gift"></i>
@@ -194,22 +194,49 @@
       </div>
 
       <!-- Main side--Table bar  -->
-      <div class="h-full bg-white place-content-center rounded-xl p-6 m-4">
+      <div class="h-fit bg-white place-content-center rounded-2xl p-6 m-4">
         <!-- Table bar__Info  -->
         <div class="h-48 grid grid-rows-2">
           <div class="grid grid-cols-3">
-            <div class="col-span-2"><div>All Products</div>
-          <div>A lightweight, extendable, dependency-free javascript HTML table plugin.</div></div>
-          <div class="flex">
-            <span class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md np-color text-white">+ New Product</span>
-            <span class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md port-color">Import</span>
-            <span class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md port-color">Export</span>
+            <div class="col-span-2">
+              <div class="text-xl font-semibold text-slate-700">
+                All Products
+              </div>
+              <div class="text-slate-500">
+                A lightweight, extendable, dependency-free javascript HTML table
+                plugin.
+              </div>
+            </div>
+            <div class="flex">
+              <span
+                class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md np-color text-white"
+                >+ New Product</span
+              >
+              <span
+                class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md port-color"
+                >Import</span
+              >
+              <span
+                class="h-fit mx-1 px-8 py-2 font-bold text-xs rounded-md port-color"
+                >Export</span
+              >
+            </div>
           </div>
-          </div>
-          <div class="grid grid-cols-10">
-            <div class="col-span-8">5 entries per page</div>
-            <div>
-              <input class="rounded-md text-slate-700" type="text" name="search" id="search" placeholder="Search...">
+          <div class="grid grid-cols-10 text-xs text-slate-400">
+            <div class="col-span-8 flex items-center gap-1 px-4">
+              <div class="">5</div>
+              <i class="fa-solid fa-chevron-down pl-4"></i>
+              <div></div>
+              entries per page
+            </div>
+            <div class="flex items-center">
+              <input
+                class="rounded-md text-slate-700"
+                type="text"
+                name="search"
+                id="search"
+                placeholder="Search..."
+              />
             </div>
           </div>
         </div>
@@ -590,6 +617,76 @@
             </div>
             <!-- Table row end  -->
           </div>
+        </div>
+
+        <!-- Table bar__footer  -->
+        <div class="h-12 grid grid-cols-2 my-4">
+          <div class="flex items-center text-slate-400 text-sm">
+            Showing 1 to 7 of 15 entries
+          </div>
+          <div class="flex items-center justify-end gap-1 text-slate-400">
+            <i
+              class="block flex items-center fa-solid fa-angle-left h-9 w-9 border rounded-full justify-center text-xs footer-btn"
+            ></i>
+            <div
+              class="flex items-center h-9 w-9 border rounded-full justify-center np-color text-white"
+            >
+              1
+            </div>
+            <div
+              class="flex items-center h-9 w-9 border rounded-full justify-center footer-btn"
+            >
+              2
+            </div>
+            <div
+              class="flex items-center h-9 w-9 border rounded-full justify-center footer-btn"
+            >
+              3
+            </div>
+            <i
+              class="block flex items-center h-9 w-9 fa-solid fa-angle-right border rounded-full justify-center text-xs footer-btn"
+            ></i>
+          </div>
+        </div>
+      </div>
+      <!-- Footer  -->
+      <div class="h-8 grid grid-cols-2 px-10 text-slate-500 text-sm">
+        <div class="flex justify-start items-center">
+          © 2023, made with
+          <i class="m-1 fa-solid fa-heart text-red-700"></i> by
+          <a
+            class="m-1 font-bold text-slate-700"
+            target="_blank"
+            href="https://www.facebook.com/gnourtnaux99/"
+            >Xuan Truong</a
+          >
+          for a better web.
+        </div>
+        <div class="flex justify-end items-center gap-8">
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >Creative Tim</a
+          >
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/presentation?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >About Us</a
+          >
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/blog?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >Blog</a
+          >
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/license?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >License</a
+          >
         </div>
       </div>
     </div>

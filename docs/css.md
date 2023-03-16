@@ -38,4 +38,11 @@ Ex:
     flex justify-start
     flex justify-center
 
-Justify content dùng cho Block, justify item dùng cho Inline 
+Justify content dùng cho Block, justify item dùng cho Inline
+
+Ví dụ:
+
+    Dùng Tailwind để căn giữa theo chiều dọc và chiều ngang của 1 content trong 1 thẻ div:
+        <div class"flex justify-center items-center"> Hahaha <div>
+                Trong đó justify-center để căn chữ nằm ở cột giữa, items-center chính là align center để căn chữ nằm ở hàng giữa
+ 
