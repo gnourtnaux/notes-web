@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script
+      src="https://kit.fontawesome.com/2e2ec984fa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/themify-icons/themify-icons/themify-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/charts.css-0.9.0/dist/charts.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/charts.css-0.9.0/dist/charts.css.map"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/css/charts.css-0.9.0/dist/charts.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/edit_product.css" />
+  </head>
+  <body class="background-color">
+    <!-- Background  -->
+    <div class="h-80 main-bg top-0 right-0 left-0 fixed"></div>
+    <!-- Side  -->
+    <!-- Left side  -->
+    <div class="leftside w-64 bg-white m-5 rounded-xl fixed text-sm">
+      <!-- Left side--title    -->
+
+      <a
+        class="block h-20 p-6 grid grid-cols-6"
+        href="https://demos.creative-tim.com/argon-dashboard-pro-tailwind/pages/dashboards/default.html"
+        ><img
+          class="col-span-1 inline-block h-8 w-8 self-center"
+          src="./assets/images/Logo dashboard.png"
+          alt="dashboadr-logo"
+        />
+        <div
+          class="col-span-5 font-semibold text-slate-700 pl-1 text-sm self-center"
+        >
+          Argon Dashboard 2 PRO
+        </div>
+      </a>
+      <!-- Left side--hr  -->
+      <hr />
+      <!-- Left side--Menu  -->
+      <div class="col-span-2">
+        <div class="mt-4 p-4 h-9 grid grid-cols-12">
+          <div class="ml-3 col-span-2">
+            <i class="fa-solid fa-store text-blue-500"></i>
+          </div>
+          <div class="col-span-9 justify-self-start text-slate-600">
+            Dashboards
+          </div>
+          <div><i class="fa-solid fa-angle-up"></i></div>
+        </div>
+        <div class="m-6 grid grid-rows-6 gap-4 text-slate-400">
+          <div class="pl-8">Landing</div>
+          <div class="pl-8">Default</div>
+          <div class="pl-8">Automotive</div>
+          <div class="pl-8">Smart Home</div>
+          <div class="pl-8">Virtual Reality</div>
+          <div class="pl-8">CRM</div>
+        </div>
+      </div>
+
+      <div class="mx-6 pl-1 font-semibold text-xs text-slate-400">PAGES</div>
+      <!-- Left side--Pages  -->
+      <div class="col-span-2">
+        <div class="mt-4 p-4 h-9 grid grid-cols-12">
+          <div class="ml-3 col-span-2">
+            <i class="fa-solid fa-copy text-red-500"></i>
+          </div>
+          <div class="col-span-9 justify-self-start text-slate-600">Pages</div>
+          <div><i class="fa-solid fa-angle-up"></i></div>
+        </div>
+        <div class="m-6 grid grid-rows-11 gap-4 text-slate-400">
+          <div class="pl-8">Profile</div>
+          <div class="pl-8">Users</div>
+          <div class="pl-8">Account</div>
+          <div class="pl-8">Projects</div>
+          <div class="pl-8">Pricing Page</div>
+          <div class="pl-8">Chat</div>
+          <div class="pl-8">RTL</div>
+          <div class="pl-8">Widgets</div>
+          <div class="pl-8">Charts</div>
+          <div class="pl-8">Sweet Alerts</div>
+          <div class="pl-8">Notifications</div>
+          <div class="pl-8 grid grid-cols-5">
+            <div class="col-span-4">Virtual Reality</div>
+            <i class="block flex items-center fa-solid fa-angle-down"></i>
+          </div>
+          <div class="pl-8">CRM</div>
+        </div>
+      </div>
+      <!-- Left side--DOCS  -->
+      <div class="col-span-2">
+        <div class="mt-4 p-4 h-9 grid grid-cols-12">
+          <div class="ml-3 col-span-2"><i class="fa-solid fa-store"></i></div>
+          <div class="col-span-9 justify-self-start text-slate-600">
+            Dashboards
+          </div>
+          <div><i class="fa-solid fa-angle-up"></i></div>
+        </div>
+        <div class="m-6 grid grid-rows-6 gap-4 text-slate-400">
+          <div class="pl-8">Landing</div>
+          <div class="pl-8">Default</div>
+          <div class="pl-8">Automotive</div>
+          <div class="pl-8">Smart Home</div>
+          <div class="pl-8">Virtual Reality</div>
+          <div class="pl-8">CRM</div>
+        </div>
+      </div>
+    </div>
+    <!-- Main side  -->
+    <div class="relative ml-72 grid grid-rơws-3 pb-4">
+      <!-- Main side--Header bar -->
+      <div class="h-24 grid grid-cols-12 text-white pl-4">
+        <div class="col-span-3 grid grid-rows-2 self-center pl-4">
+          <div class="flex">
+            <i class="items-start fa-solid fa-gift"></i>
+            <div
+              class="items-start text-sm pl-2 leading-normal before:items-start before:pr-2 before:text-white before:content-['/']"
+            ></div>
+            <span class="items-start text-gray-300">Pages</span>
+            <span
+              class="items-start text-sm pl-2 leading-normal before:items-start before:pr-2 before:text-white before:content-['/']"
+            ></span>
+            <span class="items-start">Products List</span>
+          </div>
+          <div class="font-bold">Products List</div>
+        </div>
+        <div class="col-span self-center">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+        <div
+          class="col-span-8 self-center text-white mr-2 grid grid-flow-col grid-cols-max justify-end gap-3 pr-4"
+        >
+          <form action="/action_page.php">
+            <div class="relative">
+              <div class="absolute text-slate-400 top-2 left-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <input
+                class="border-none rounded-md pl-8 text-slate-700"
+                type="text"
+                placeholder="Type here..."
+                name="search"
+              />
+            </div>
+          </form>
+
+          <div class="mt-2 w-fit">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="mt-2 w-fit">Sign In</div>
+
+          <div class="mt-2 w-fit">
+            <i class="fa-solid fa-gear"></i>
+          </div>
+          <div class="mt-2 w-fit">
+            <i class="fa-solid fa-bell"></i>
+          </div>
+        </div>
+      </div>
+      <!-- Main side--Notes  -->
+      <div class="px-4 text-white mb-6">
+        <div class="text-2xl font-semibold">Make the changes below</div>
+        <div class="grid grid-cols-3 py-2">
+          <div class="col-span-2 text-white-200">
+            We’re constantly trying to express ourselves and actualize our
+            dreams. If you
+            <hr class="w-0" />
+            have the opportunity to play.
+          </div>
+          <div class="flex justify-end items-center">
+            <span
+              class="border px-4 py-2 rounded-md font-semibold save-btn text-white-300"
+              >Save</span
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Main side 1 -->
+      <div class="h-content grid grid-cols-12 mb-4">
+        <!-- Main side__Left main  -->
+        <div
+          class="col-span-4 bg-white h-content place-content-center mx-4 rounded-2xl px-4 py-8"
+        >
+          <div class="text-xl text-slate-700 font-bold mb-4">Product Image</div>
+          <img
+            class="rounded-md mb-4"
+            src="./assets/images/product-page.jpg"
+            alt="product-image"
+          />
+          <div class="flex gap-2 text-xs font-bold">
+            <div class="text-white my-4 border">
+              <span class="px-8 py-2 edit-btn rounded-md">Edit</span>
+            </div>
+            <div class="text-slate-700 my-4">
+              <span class="border border-slate-700 px-8 py-2 rounded-md"
+                >Remove</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Main side__right main  -->
+        <div
+          class="col-span-8 bg-white h-content place-content-center mx-4 rounded-2xl px-4 py-8"
+        >
+          <div class="text-xl text-slate-700 font-bold mb-4">
+            Product Infomation
+          </div>
+          <div class="h-64 grid grid-rows-3">
+            <div class="grid grid-cols-2">
+              <div class="m-4">
+                <div class="m-1 text-xs font-bold text-slate-600">Name</div>
+                <div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="text"
+                    placeholder="Minimal Bar Stool"
+                  />
+                </div>
+              </div>
+              <div class="m-4">
+                <div class="m-1 text-xs font-bold text-slate-600">Weight</div>
+                <div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value="2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2">
+              <div class="flex">
+                <div class="mx-4 w-1/2">
+                  <div class="m-1 text-xs font-bold text-slate-600">
+                    Collection
+                  </div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="text"
+                    placeholder="Summer"
+                  />
+                </div>
+                <div class="mx-4 w-1/2">
+                  <div class="m-1 text-xs font-bold text-slate-600">Price</div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="text"
+                    value="$90"
+                  />
+                </div>
+              </div>
+              <div>
+                <div class="mx-4 w-1/2">
+                  <div class="m-1 text-xs font-bold text-slate-600">
+                    Quantity
+                  </div>
+                  <div>
+                    <input
+                      class="rounded-md w-full border border-gray-300"
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="5"
+                      value="50"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2">
+              <div class="mx-4">
+                <div class="m-1 font-bold text-slate-600">
+                  <span class="text-sm">Description</span>
+                  <span class="px-1 text-xs justify">(optional)</span>
+                </div>
+                <div>
+                  <textarea
+                    class="w-full h-44 rounded-md border border-slate-300"
+                    rows="4"
+                    cols="50"
+                  >
+Long sleeves black denim jacket with a twisted design. Contrast stitching. Button up closure. White arrow prints on the back.</textarea
+                  >
+                </div>
+              </div>
+
+              <div class="grid grid-rows-2">
+                <div class="mx-4 my-2">
+                  <div>Category</div>
+                  <select
+                    class="text-slate-700 w-full border border-slate-300 rounded-md"
+                    name="Furniture"
+                    id="Furniture"
+                    aria-placeholder="Furniture"
+                  >
+                    <option value="Clothing">Clothing</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Others">Others</option>
+                    <option value="Real Estate">Real Estate</option>
+                  </select>
+                </div>
+                <div class="mx-4 my-2">
+                  <div>Color</div>
+                  <select
+                    class="text-slate-700 w-full border border-slate-300 rounded-md"
+                    name="Furniture"
+                    id="Furniture"
+                    aria-placeholder="Furniture"
+                  >
+                    <option value="Clothing">Black</option>
+                    <option value="Electronics">Blue</option>
+                    <option value="Furniture">Green</option>
+                    <option value="Others">Orange</option>
+                    <option value="Real Estate">White</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Main side 2 -->
+      <div class="h-96 grid grid-cols-12 mb-4">
+        <!-- Main side__Left main  -->
+        <div
+          class="col-span-4 bg-white h-96 place-content-center mx-4 rounded-2xl px-4 py-8"
+        >
+          <div class="text-xl text-slate-700 font-bold mb-4">Socials</div>
+          <div class="grid grid-rows-3">
+            <div>
+              <div class="m-1 text-xs font-bold text-slate-600">
+                Shopify Handle
+              </div>
+              <input
+                class="my-2 w-full rounded-md border border-slate-300"
+                type="text"
+                value="@argon"
+              />
+            </div>
+            <div>
+              <div class="m-1 text-xs font-bold text-slate-600">
+                Facebook Account
+              </div>
+              <input
+                class="my-2 w-full rounded-md border border-slate-300"
+                type="text"
+                value="https://"
+              />
+            </div>
+            <div>
+              <div class="m-1 text-xs font-bold text-slate-600">
+                Instagram Account
+              </div>
+              <input
+                class="my-2 w-full rounded-md border border-slate-300"
+                type="text"
+                value="https://"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Main side__right main  -->
+        <div
+          class="col-span-8 bg-white h-96 place-content-center mx-4 rounded-2xl px-4 py-8"
+        >
+          <div class="text-xl text-slate-700 font-bold mb-4">
+            Product Infomation
+          </div>
+          <div class="h-64 grid grid-rows-3">
+            <div class="grid grid-cols-2">
+              <div class="m-4">
+                <div class="m-1 text-xs font-bold text-slate-600">Name</div>
+                <div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="text"
+                    placeholder="Minimal Bar Stool"
+                  />
+                </div>
+              </div>
+              <div class="m-4">
+                <div class="m-1 text-xs font-bold text-slate-600">Weight</div>
+                <div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="number"
+                    min="0"
+                    max="100"
+                    step="5"
+                    value="2"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2">
+              <div class="flex">
+                <div class="mx-4 w-1/2">
+                  <div class="m-1 text-xs font-bold text-slate-600">
+                    Collection
+                  </div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="text"
+                    placeholder="Summer"
+                  />
+                </div>
+                <div class="mx-4 w-1/2">
+                  <div class="m-1 text-xs font-bold text-slate-600">Price</div>
+                  <input
+                    class="rounded-md w-full border border-gray-300"
+                    type="text"
+                    value="$90"
+                  />
+                </div>
+              </div>
+              <div>
+                <div class="mx-4 w-1/2">
+                  <div class="m-1 text-xs font-bold text-slate-600">
+                    Quantity
+                  </div>
+                  <div>
+                    <input
+                      class="rounded-md w-full border border-gray-300"
+                      type="number"
+                      min="0"
+                      max="100"
+                      step="5"
+                      value="50"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-2">
+              <div class="mx-4">
+                <div class="m-1 font-bold text-slate-600">
+                  <span class="text-sm">Description</span>
+                  <span class="px-1 text-xs justify">(optional)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer  -->
+      <div class="h-8 grid grid-cols-2 px-10 text-slate-500 text-sm">
+        <div class="flex justify-start items-center">
+          © 2023, made with
+          <i class="m-1 fa-solid fa-heart text-red-700"></i> by
+          <a
+            class="m-1 font-bold text-slate-700"
+            target="_blank"
+            href="https://www.facebook.com/gnourtnaux99/"
+            >Xuan Truong</a
+          >
+          for a better web.
+        </div>
+        <div class="flex justify-end items-center gap-8">
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >Creative Tim</a
+          >
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/presentation?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >About Us</a
+          >
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/blog?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >Blog</a
+          >
+          <a
+            class="block"
+            target="_blank"
+            href="https://www.creative-tim.com/license?_ga=2.27296063.2065815607.1678677480-713459618.1678373945"
+            >License</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
