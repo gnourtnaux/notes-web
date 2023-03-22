@@ -5,7 +5,7 @@ Lệnh usestrict để đặt các strict khiến cho việc sử dụng code tr
     _Biến phải được khai báo trước khi sử dụng
 
 
-### **VARIABLE** ###
+### **I. VARIABLE** ###
 Một variable (biến) là một phần tử được sử dụng để đặt tên cho data
 Để sử dụng biến trong JS  sử dụng lệnh let
 
@@ -26,7 +26,7 @@ Có thể khai báo nhiều biến liên tục, ngăn cách bằng dấu phẩy:
 
 Lệnh VAR và LET tương tự nhau, tuỳ theo sở thích sử dụng!
 
-### **DATA TYPES** ###
+### **II. DATA TYPES** ###
 Một giá trị trong JS luôn thuộc một loại dữ liệu nhất định, có thể là một chuỗi kí tự, một số, ...
 Một biến có thể chứa nhiều kiểu dữ liệu cùng lúc, ex:
 
@@ -60,12 +60,12 @@ Có 8 loại dữ liệu cơ bản trong JS:
         `Hello` 
     Ngoặc đơn và ngoặc kép có tác dụng như nhau, với ngoặc backstick thì có thể sử dụng để khai báo Template Literals (hoặc Template String). Sử dụng Template Literals với cú pháp
     
-         $(expression)
+         ${expression}
     Ex:
 
             var name = "Truong",
             team = 'Manchester United';
-            alert(`Hello, tôi tên là $(name) và tôi là một fan của $(team) được $(2023-2011) năm rồi)
+            alert(`Hello, tôi tên là ${name} và tôi là một fan của ${team} được ${2023-2011} năm rồi)
             ==> Hello, tôi tên là Truong và tôi là một fan của Manchester United được 12 năm rồi
 4. boolean : kiểu logic
     
@@ -96,3 +96,30 @@ Có 8 loại dữ liệu cơ bản trong JS:
 
 
 Lệnh **TYPEOF** dùng để kiểm tra kiểu dữ liệu
+
+### **III. INTERACTION** ###
+1. alert: 1 hộp thoại thông báo
+2. prompt
+    
+    Hiện 1 hộp thoại yêu cầu user nhập thông tin. Cấu trúc:
+
+        prompt(message, default);
+     Trong đó message là thông báo hiển thị trong hộp thoại còn default là giá trị mặc định của thông tin nhập. Value của prompt là giá trị nhập, còn ấn cancel thì value = null.
+    
+    Ex:
+
+        var age = prompt('How old are you?',100);
+        alert(`You are ${age} years old!`);
+3. confirm
+    
+    Cấu trúc:
+    
+        result = comfirm(question);
+    Confirm sẽ đưa ra một hộp thoại chứa câu hỏi kèm 2 nút OK và Cancel. Nhấn OK cho giá trị true, Cancel cho false
+
+    Ex:
+
+        var isHandsome=confirm('Are you handsome?');
+        alert(isHandsome);
+
+      
