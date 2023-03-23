@@ -121,5 +121,3 @@ Lệnh **TYPEOF** dùng để kiểm tra kiểu dữ liệu
 
         var isHandsome=confirm('Are you handsome?');
         alert(isHandsome);
-
-      
