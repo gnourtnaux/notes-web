@@ -22,7 +22,7 @@ Tương tự với -= ; *= và /=
 _Để tạo một trích dẫn trong dấu "" thì nên dùng \ để không bị ngắt giữa dòng. Ex:
 
     const doanVan = "Albert Einstein wrote, \“Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid\”."
-hoặc dùng 1 cách khác là sử dụng dấu '' để đóng mở string và dấu "" để đóng mở trích dẫn. Ex:
+hoặc dùng 1 cách khác là sử dụng dấu ' ' để đóng mở string và dấu " " để đóng mở trích dẫn. Ex:
 
     const doanVan = 'Albert Einstein wrote, “Everybody is a genius. But if you judge a fish by its ability to climb a tree, it will live its whole life believing that it is stupid”.'
 
@@ -65,3 +65,71 @@ _Để lấy kí tự cuối của một chuỗi thì lấy index bằng cách l
         
         const tenToiLa="Cao Xuan Truong";
         const layChuR = tenToiLa[tenToiLa.length-5];
+
+_Array có cấu trúc [data1,data2,data3,...], data có thể là bất kì loại data nào
+
+Có thể thêm array vào array, ex:
+
+    const teams = [["Bulls", 23], ["White Sox", 45]];
+Dùng index để lấy giá trị trong array. Ex:
+
+    const array = [50, 60, 70];
+    console.log(array[0]);
+    const data = array[1];  
+        ==> Console hiện 50; giá trị của data là 60
+
+_Hàm 
+
+    console.log(variable);
+dùng để hiển thị giá trị của variable đã khai báo trong màn hình console
+
+_Giá trị trong 1 chuỗi là bất biến nhưng array thì có thể thay đổi. Ex:
+
+    const ourArray=[50, 40, 20];
+    ourtArray[2]=30;
+    ==> Array sẽ thành 50, 40, 30
+_Với multi-array thì call index lần thứ bao nhiêu thì vào sâu trong array bấy nhiêu. Ex:
+
+    const arr = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+    [[10, 11, 12], 13, 14] 
+    ];
+
+    const subarray = arr[3]; ==> subarray value = [[10, 11, 12], 13, 14]
+    const nestedSubarray = arr[3][0]; ==> nestedSubarray value = [10, 11, 12]
+    const element = arr[3][0][1];==> element value = 11
+    *Lưu ý khi call index phải viết liền nhau.
+
+_Thêm data vào cuối array bằng function: 
+
+    .push()
+
+Ex:
+
+        const arr1 = [1,"a",3];
+        arr1.push(4); ==> arr1 value = 1,a,3,4
+        arr1.push("hehe"); ==> arr1 value = 1,a,3,4,hehe
+        arr1.push(["haha",5]) ==> arr1 value = [1,a,3,4,hehe,[haha,5]]
+
+ _Ngắt element cuối cùng của array bằng function:
+
+        .pop()
+Ex:
+
+        const baKiTu=["mot","hai","ba"];
+        const layKiTuCuoi = baKiTu.pop();
+        console.log(baKiTu); ==> mot, hai
+        console.log(layKiTuCuoi); ==> ba
+
+_Ngắt element đầu tiên của array bằng function:
+
+        .shift()
+Ex tương tự pop()
+
+_Thêm data vào đầu array bằng function:
+
+    .unshift()
+
+Ex tương tự push()
