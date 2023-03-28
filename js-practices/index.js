@@ -34,69 +34,121 @@
 
 // const a=sumEvenThree([1,33,42,52,6,71,23,43,54,65,76,-123,-989,-213,-326,1266]);
 // console.log(a);
+
+// ĐỔI SỐ THƯỜNG THÀNH SỐ LA MÃ
+
+// let numOut = 0;
+// let numK = "";
+// const a = {
+//   0: "",
+//   1: "I",
+//   2: "II",
+//   3: "III",
+//   4: "IV",
+//   5: "V",
+//   6: "VI",
+//   7: "VII",
+//   8: "VIII",
+//   9: "IX",
+// };
+// const b = {
+//   0: "",
+//   10: "X",
+//   20: "XX",
+//   30: "XXX",
+//   40: "XL",
+//   50: "L",
+//   60: "LX",
+//   70: "LXX",
+//   80: "LXXX",
+//   90: "XC",
+// };
+// const c = {
+//   0: "",
+//   100: "C",
+//   200: "CC",
+//   300: "CCC",
+//   400: "CD",
+//   500: "D",
+//   600: "DC",
+//   700: "DCC",
+//   800: "DCCC",
+//   900: "CM",
+// };
+// const d = "M";
+
+// let numIn = 1994;
+
+// for (let i = 1; i < (numIn / 1000)+1; i++) {
+//   numK += d;
+// }
+
+// if (numIn < 10) {
+//   numOut = a[numIn];
+// } else {
+//   if (numIn < 100) {
+//     numOut = b[numIn - (numIn % 10)] + a[numIn % 10];
+//     console.log(numOut);
+//   } else {
+//     if (numIn < 1000) {
+//       numOut =
+//         c[numIn - (numIn % 100)] +
+//         b[(numIn % 100) - (numIn % 10)] +
+//         a[numIn % 10];
+//     } else {
+//       if(numIn==1000){numOut="M"}else{numOut =
+//         numK +
+//         c[(numIn % 1000) - (numIn % 100)] +
+//         b[(numIn % 100) - (numIn % 10)] +
+//         a[numIn % 10]}
+//       ;
+//     }
+//   }
+// }
+
+// console.log(`Số ${numIn} tương ứng với ${numOut}`);
+
 let numOut = 0;
-let numK = "";
-const a = {
-  0: "",
-  1: "I",
-  2: "II",
-  3: "III",
-  4: "IV",
-  5: "V",
-  6: "VI",
-  7: "VII",
-  8: "VIII",
-  9: "IX",
-};
-const b = {
-  10: "X",
-  20: "XX",
-  30: "XXX",
-  40: "XL",
-  50: "L",
-  60: "LX",
-  70: "LXX",
-  80: "LXXX",
-  90: "XC",
-};
-const c = {
-  100: "C",
-  200: "CC",
-  300: "CCC",
-  400: "CD",
-  500: "D",
-  600: "DC",
-  700: "DCC",
-  800: "DCC",
-  900: "CM",
-};
 const d = "M";
-
-let numIn = 32361;
-for (let i = 0; i < numIn / 1000; i++) {
-  numK += d;
-}
-
-if (numIn < 10) {
-  numOut = a[numIn];
+let numK = "";
+let numIn = 500;
+if (numIn % 1000 == 0) {
+  for (let i = 1; i < numIn / 1000 + 1; i++) {
+    numOut = numK += d;
+  }
 } else {
-  if (numIn < 100) {
-    numOut = b[numIn - (numIn % 10)] + a[numIn % 10];
-    console.log(numOut);
+  for (let i = 0; i < numIn / 1000; i++) {
+    numK += d;
+  }
+
+  if (numIn < 10) {
+    numOut = a[numIn];
+    return numOut;
   } else {
-    if (numIn < 1000) {
-      numOut =
-        c[numIn - (numIn % 100)] +
-        b[(numIn % 100) - (numIn % 10)] +
-        a[numIn % 10];
+    if (numIn < 100) {
+      numOut = b[numIn - (numIn % 10)] + a[numIn % 10];
+      console.log(numOut);
+      return numOut;
     } else {
-      numOut =
-        numK +
-        c[(numIn % 1000) - (numIn % 100)] +
-        b[(numIn % 100) - (numIn % 10)] +
-        a[numIn % 10];
+      if (numIn < 1000) {
+        numOut =
+          c[numIn - (numIn % 100)] +
+          b[(numIn % 100) - (numIn % 10)] +
+          a[numIn % 10];
+        return numOut;
+      } else {
+        if (numIn == 1000) {
+          numOut = "M";
+        } else {
+          numOut =
+            numK +
+            c[(numIn % 1000) - (numIn % 100)] +
+            b[(numIn % 100) - (numIn % 10)] +
+            a[numIn % 10];
+        }
+        return numOut;
+      }
     }
   }
 }
-
-console.log(`Số ${numIn} tương ứng với ${numOut}`);
+console.log(numOut);
