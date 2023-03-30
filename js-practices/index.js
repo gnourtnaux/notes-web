@@ -152,3 +152,4 @@ if (numIn % 1000 == 0) {
   }
 }
 console.log(numOut);
+// some day you have to cheat lmao 
