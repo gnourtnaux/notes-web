@@ -108,48 +108,60 @@
 
 // console.log(`Số ${numIn} tương ứng với ${numOut}`);
 
-let numOut = 0;
-const d = "M";
-let numK = "";
-let numIn = 500;
-if (numIn % 1000 == 0) {
-  for (let i = 1; i < numIn / 1000 + 1; i++) {
-    numOut = numK += d;
-  }
-} else {
-  for (let i = 0; i < numIn / 1000; i++) {
-    numK += d;
-  }
+// ĐỔI SÓ THƯỜNG THÀNH SỐ LA MÃ 2
+// let numOut = 0;
+// const d = "M";
+// let numK = "";
+// let numIn = 500;
+// if (numIn % 1000 == 0) {
+//   for (let i = 1; i < numIn / 1000 + 1; i++) {
+//     numOut = numK += d;
+//   }
+// } else {
+//   for (let i = 0; i < numIn / 1000; i++) {
+//     numK += d;
+//   }
 
-  if (numIn < 10) {
-    numOut = a[numIn];
-    return numOut;
-  } else {
-    if (numIn < 100) {
-      numOut = b[numIn - (numIn % 10)] + a[numIn % 10];
-      console.log(numOut);
-      return numOut;
-    } else {
-      if (numIn < 1000) {
-        numOut =
-          c[numIn - (numIn % 100)] +
-          b[(numIn % 100) - (numIn % 10)] +
-          a[numIn % 10];
-        return numOut;
-      } else {
-        if (numIn == 1000) {
-          numOut = "M";
-        } else {
-          numOut =
-            numK +
-            c[(numIn % 1000) - (numIn % 100)] +
-            b[(numIn % 100) - (numIn % 10)] +
-            a[numIn % 10];
-        }
-        return numOut;
-      }
-    }
-  }
+//   if (numIn < 10) {
+//     numOut = a[numIn];
+//     return numOut;
+//   } else {
+//     if (numIn < 100) {
+//       numOut = b[numIn - (numIn % 10)] + a[numIn % 10];
+//       console.log(numOut);
+//       return numOut;
+//     } else {
+//       if (numIn < 1000) {
+//         numOut =
+//           c[numIn - (numIn % 100)] +
+//           b[(numIn % 100) - (numIn % 10)] +
+//           a[numIn % 10];
+//         return numOut;
+//       } else {
+//         if (numIn == 1000) {
+//           numOut = "M";
+//         } else {
+//           numOut =
+//             numK +
+//             c[(numIn % 1000) - (numIn % 100)] +
+//             b[(numIn % 100) - (numIn % 10)] +
+//             a[numIn % 10];
+//         }
+//         return numOut;
+//       }
+//     }
+//   }
+// }
+// console.log(numOut);
+// some day you have to cheat lmao
+
+// CỘNG 2 SỐ
+const target = 4;
+let mangOut = [];
+const mangIn = [1, 2, 3, 4, 6];
+let twoSum = 0;
+for (let i = 0;  i < mangIn.length ; i++) {
+  if (mangIn[i] === target) break;
+  mangOut.push(mangIn[i]);
 }
-console.log(numOut);
-// some day you have to cheat lmao 
+console.log(mangOut);
