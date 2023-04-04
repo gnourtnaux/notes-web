@@ -156,12 +156,24 @@
 // some day you have to cheat lmao
 
 // CỘNG 2 SỐ
-const target = 4;
-let mangOut = [];
-const mangIn = [1, 2, 3, 4, 6];
+// let mangIn = [];
+// let target = 0;
+const mangIn = [2, 7, 11, 15];
+const target = 9;
+let mangOut = [,];
 let twoSum = 0;
-for (let i = 0;  i < mangIn.length ; i++) {
-  if (mangIn[i] === target) break;
-  mangOut.push(mangIn[i]);
+for (let i = 0; i < mangIn.length; i++) {
+  if (mangIn[i] === target) {
+    mangOut[0] = mangIn[i];
+  } else {
+    twoSum = mangIn[i];
+    for (let y = i+1; y < mangIn.length; y++) {
+      if (twoSum + mangIn[y] === target) {
+        mangOut[0] = mangIn[i];
+        mangOut[1] = mangIn[y];
+      }
+    }
+  }
 }
+
 console.log(mangOut);
