@@ -36,7 +36,6 @@
 // console.log(a);
 
 // ĐỔI SỐ THƯỜNG THÀNH SỐ LA MÃ
-
 // let numOut = 0;
 // let numK = "";
 // const a = {
@@ -155,25 +154,80 @@
 // console.log(numOut);
 // some day you have to cheat lmao
 
-// CỘNG 2 SỐ
+// TWO SUM
 // let mangIn = [];
 // let target = 0;
-const mangIn = [2, 7, 11, 15];
-const target = 9;
-let mangOut = [,];
-let twoSum = 0;
-for (let i = 0; i < mangIn.length; i++) {
-  if (mangIn[i] === target) {
-    mangOut[0] = mangIn[i];
-  } else {
-    twoSum = mangIn[i];
-    for (let y = i+1; y < mangIn.length; y++) {
-      if (twoSum + mangIn[y] === target) {
-        mangOut[0] = mangIn[i];
-        mangOut[1] = mangIn[y];
+// const mangIn = [2, 7, 11, 15];
+// const target = 9;
+// let mangOut = [,];
+// let Output = [];
+// let twoSum = 0;
+// for (let i = 0; i < mangIn.length; i++) {
+//   if (mangIn[i] === target) {
+//     mangOut[0] = mangIn[i];
+//     Output.push(i);
+//   } else {
+//     twoSum = mangIn[i];
+//     for (let y = i+1; y < mangIn.length; y++) {
+//       if (twoSum + mangIn[y] === target) {
+//         mangOut[0] = mangIn[i];
+//         mangOut[1] = mangIn[y];
+//         Output.push(i);
+//         Output.push(y);
+//       }
+//     }
+//   }
+// }
+// Xuất ra 2 số có tổng theo target
+// console.log(mangOut);
+// console.log(Output);
+// Xuất ra index của 2 số trong mảng có tổng theo target
+
+// PASSED TWO SUM:
+// /**
+//   let Output = [];
+//   let twoSum = 0;
+//   for (let i = 0; i < nums.length; i++) {
+//     if (nums[i] === target) {
+//       Output.push(i);
+//       for (let z=i+1;z<nums.length;z++){if (nums[z]=== target){Output.push(z)}}
+//       return(Output)
+//     } else {
+//       twoSum = nums[i];
+//       for (let y = i+1; y < nums.length; y++) {
+//         if (twoSum + nums[y] === target) {
+//           Output.push(i);
+//           Output.push(y);
+//           return(Output)
+
+//         }
+//       }
+//     }
+//   }
+//   };
+
+// PALINDROME
+// const x = 121;
+// const output = Number(x.toString().split("").reverse().join(""));
+// console.log(Boolean(output % x == 0 && output / x == 1 || x==0));
+
+// LONGEST COMMON PREFIXES
+const inA = ["", ""];
+console.log(inA)
+let output = [];
+let y = 0;
+for (let i = 0; i < inA.length - 1; i++) {
+  let y = i + 1;
+  if (inA[i][0] == inA[y][0]) {
+    output = inA[i][0];
+    for (let z = 1; z < inA[i].length; z++) {
+      if (inA[i][z] == inA[y][z]) {
+        output += inA[i][z];
       }
     }
+  } else{
+    output = "";
   }
 }
+console.log(output);
 
-console.log(mangOut);
