@@ -211,23 +211,65 @@
 // const output = Number(x.toString().split("").reverse().join(""));
 // console.log(Boolean(output % x == 0 && output / x == 1 || x==0));
 
-// LONGEST COMMON PREFIXES
-const inA = ["", ""];
-console.log(inA)
-let output = [];
-let y = 0;
-for (let i = 0; i < inA.length - 1; i++) {
-  let y = i + 1;
-  if (inA[i][0] == inA[y][0]) {
-    output = inA[i][0];
-    for (let z = 1; z < inA[i].length; z++) {
-      if (inA[i][z] == inA[y][z]) {
-        output += inA[i][z];
+// LONGEST COMMON PREFIXES - 110/124 cases
+// const inA = ["", ""];
+// console.log(inA)
+// let output = [];
+// let y = 0;
+// for (let i = 0; i < inA.length - 1; i++) {
+//   let y = i + 1;
+//   if (inA[i][0] == inA[y][0]) {
+//     output = inA[i][0];
+//     for (let z = 1; z < inA[i].length; z++) {
+//       if (inA[i][z] == inA[y][z]) {
+//         output += inA[i][z];
+//       }
+//     }
+//   } else{
+//     output = "";
+//   }
+// }
+// console.log(output);
+
+// VALID PARENTHESES
+const openB = ["(", "[", "{"];
+const closeB = [")", "]", "}"];
+let p = "[";
+let pA = p.split("");
+let output = true;
+console.log(pA);
+if ((pA.length)%2==1) {
+  output = false;
+} else {
+  for (let i = 0; i < pA.length; i++) {
+    for (let y = 0; y < openS.length; y++) {
+      if (pA[i] == openB[y]) {
+        if (pA[i + 1] == closeB[y]) {
+          output = true;
+        } else {
+          output = false;
+        }
+        if (pA[i] == closeB[y]) {
+          if (pA[i - 1] == openB[y]) {
+            output = true;
+          } else {
+            output = false;
+          }
+        }
       }
     }
-  } else{
-    output = "";
   }
 }
-console.log(output);
 
+console.log(Boolean(output));
+
+// for (let i=0; i<s.length;i++){
+//   if(s)
+// }
+// const aloha = (hehe) => {
+//   return hehe+1;
+//   };
+
+//   aloha(3);
+
+//   console.log(aloha(3));
