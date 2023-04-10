@@ -24,7 +24,6 @@ Có thể khai báo nhiều biến liên tục, ngăn cách bằng dấu phẩy:
         
         let use = 'Truong', age = 24, message = 'Hello';
 
-Lệnh VAR và LET tương tự nhau, tuỳ theo sở thích sử dụng!
 
 ### **II. DATA TYPES** ###
 Một giá trị trong JS luôn thuộc một loại dữ liệu nhất định, có thể là một chuỗi kí tự, một số, ...
