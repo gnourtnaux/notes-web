@@ -1,0 +1,11 @@
+.mainside{
+    height: 314px;
+    margin-top: 20px;
+}
+.mainside--left__console , .mainside--right__console{
+    height:215px;
+}
+#input{
+    /* direction: rtl; */
+    text-align: end;
+}
