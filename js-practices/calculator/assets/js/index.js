@@ -2,6 +2,8 @@
 let inputResult = document.getElementsByClassName("input-result");
 
 let result = "";
+let handleClearArr = [];
+let handleClearArrPop = [];
 
 const addNumber = (number) => {
   result += number.toString();
@@ -13,10 +15,17 @@ const addOperator = (operator) => {
   inputResult[0].value = result;
 };
 const allClear = () => {
-  inputResult[0].value = "";
+  result = "";
+  inputResult[0].value = result;
 };
 const handleClear = () => {
-    
+  handleClearArr = result.split();
+  console.log(handleClearArr)
+  handelClearArrPop = handleClearArr.pop();
+  console.log(handelClearArrPop)
+  result = handleClearArr.join();
+  console.log(result)
+  inputResult[0].value = result;
 };
 // const addOperator = (operator) => {
 //     result += operator.toString('');
