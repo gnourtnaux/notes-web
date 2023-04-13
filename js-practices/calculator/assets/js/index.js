@@ -20,7 +20,6 @@ const allClear = () => {
 };
 const handleClear = () => {
   handleClearArr = result.split();
-  console.log(handleClearArr)
   handelClearArrPop = handleClearArr.pop();
   console.log(handelClearArrPop)
   result = handleClearArr.join();
