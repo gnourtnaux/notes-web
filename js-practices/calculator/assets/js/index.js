@@ -2,70 +2,76 @@
 let inputResult = document.getElementsByClassName("input-result");
 let outputResult = document.getElementsByClassName("output-result");
 
-let result = "";
-let memoryNum = "";
-let tempoMemory = 0;
-let handleClearArr = [];
-let handleClearArrPop = [];
+let inputValue = "";
+let preValue = "";
+let operator = "";
+let result = 0;
+
 const addNumber = (number) => {
-  result += number.toString();
-  inputResult[0].value = result;
-};
-const addOperator = (operator) => {
-  result += ` ${operator} `;
-  // switch (operator) {
-  //   case "+":
-  //     tempoMemory +=
-  //     break;
-  //   case "-":
-  //     memory -=
-  //     break;
-  //   case "x":
-  //     memory *= memory;
-  //     break;
-  //   case "÷":
-  //     memory /= memory;
-  //     break;
-  // }
-  inputResult[0].value = result;
-};
-const handleEqual = () => {
-  let memoryNum = inputResult[0].value;
-  let lastWord = memoryNum[memoryNum.length - 1];
-  console.log(lastWord);
-  let numberCheck = isNaN(lastWord);
-  console.log(numberCheck);
-  if (numberCheck === false) {
-    return (outputResult[0].value = Number(inputResult[0].value));
+  if (isNaN(inputValue)) {
+    inputResult[0].value += number.toString();
   } else {
-    return (outputResult[0].value = 0);
+    inputValue += number.toString();
+    inputResult[0].value = inputValue;
   }
 };
-const handleAllClear = () => {
-  // let theLastWord = memory[memory.lenght - 1];
-  result = "";
-  inputResult[0].value = result;
-};
+
 const handleClear = () => {
-  handleClearArr = result.split("");
-  handleClearArrPop = handleClearArr.pop();
-  result = handleClearArr.join("");
-  inputResult[0].value = result;
+  let handleClearArr = [];
+  handleClearArr = inputValue.split("");
+  handleClearArr.pop();
+  inputValue = handleClearArr.join("");
+  inputResult[0].value = inputValue;
 };
 
-// const addOperator = (operator) => {
-//     result += operator.toString('');
-//     inputResult[0].value =
-// };
+const addOperator = (operatorValue) => {
+  preValue = inputValue;
+  inputValue += ` ${operatorValue} `;
+  inputResult[0].value = inputValue;
+  inputValue = NaN;
+  operator = operatorValue;
+};
 
-// const addOperator = (operator) => {
-//   result += operator.toString();
-//   inputResult[0].value = result;
+const handleEqual = () => {
+  if (isNaN(inputValue)) {
+    outputResult[0].value = "Error";
+  } else {
+    switch (operator) {
+      case "+":
+        outputResult[0].value = Number(preValue) + Number(inputValue);
+        break;
+      case "-":
+        outputResult[0].value = Number(preValue) - Number(inputValue);
+        break;
+      case "x":
+        outputResult[0].value = Number(preValue) * Number(inputValue);
+        break;
+      case "÷":
+        outputResult[0].value = Number(preValue) / Number(inputValue);
+        break;
+      default:
+        outputResult[0].value = preValue;
+        break;
+    }
+    operator = "";
+  }
+};
+// const doMath = (operator) => {
+//   switch (operator) {
+//     case "+":
+//       preValue += inputValue;
+//       break;
+//     case "-":
+//       preValue -= inputValue;
+//       break;
+//     case "x":
+//       preValue *= inputValue;
+//       break;
+//     case "÷":
+//       preValue /= inputValue;
+//       break;
+//   }
 // };
-// const addOperator = (operator[0]) =>{
-//    result += operator[0].toString();
-//    inputResult[0].value = result;
-// }
 
 // Tao ra mot bien
 // Lay value tren input => gan vao bien do
