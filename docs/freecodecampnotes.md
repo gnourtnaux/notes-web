@@ -134,4 +134,4 @@ _Thêm data vào đầu array bằng function:
 
 Ex tương tự push()
 
-_Chuyển number thành string dùng .toString(); chuyển string thành array dùng .split(''); đảo ngược vị trí các kí tự trong array dùng .reverse(); ghép các phần tử trong array thành string dùng .join(''); chuyển string thành số dùng number(string).
+_Chuyển number thành string dùng .toString(); chuyển string thành array dùng .split(''); đảo ngược vị trí các kí tự trong array dùng .reverse(); ghép các phần tử trong array thành string dùng .join(''); chuyển string thành số dùng Number(string).

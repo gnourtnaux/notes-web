@@ -2,73 +2,99 @@
 let inputResult = document.getElementsByClassName("input-result");
 let outputResult = document.getElementsByClassName("output-result");
 
-let inputValue = "";
+let inputValueFirst = "";
+let inputValueSecond = "";
 let preValue = "";
 let operator = "";
-let result = 0;
+let instantResult = 0;
+let handleClearArr = [];
 
 const addNumber = (number) => {
-  if (isNaN(inputValue)) {
-    inputResult[0].value += number.toString();
+  if (isNaN(inputValueFirst)) {
+    inputValueSecond += number.toString();
+    inputResult[0].value = preValue + ` ${operator} ` + inputValueSecond;
+    console.log("hehe", inputValueSecond, preValue, operator);
   } else {
-    inputValue += number.toString();
-    inputResult[0].value = inputValue;
+    inputValueFirst += number.toString();
+    inputResult[0].value = inputValueFirst;
+    console.log("haha", preValue, inputValueFirst);
   }
 };
 
-const handleClear = () => {
-  let handleClearArr = [];
-  handleClearArr = inputValue.split("");
-  handleClearArr.pop();
-  inputValue = handleClearArr.join("");
-  inputResult[0].value = inputValue;
+// const handleClear = () => {
+
+// };
+
+const handleChangeValue = (data) => {
+  console.log("data", data);
+  console.log("hoho", inputResult[0].value);
+};
+
+const handleAllClear = () => {
+  inputValueFirst = "";
+  inputValueSecond = "";
+  preValue = "";
+  operator = "";
+  inputResult[0].value = "";
+  outputResult[0].value = "";
 };
 
 const addOperator = (operatorValue) => {
-  preValue = inputValue;
-  inputValue += ` ${operatorValue} `;
-  inputResult[0].value = inputValue;
-  inputValue = NaN;
-  operator = operatorValue;
+  if (preValue !== "") {
+    inputValueSecond = "";
+    operator = operatorValue;
+    inputResult[0].value = preValue + ` ${operatorValue} `;
+    inputValueFirst = NaN;
+  } else {
+    if (operator !== "") {
+      outputResult[0].value = "Add number!";
+    } else {
+      preValue = inputValueFirst;
+      inputResult[0].value = preValue + ` ${operatorValue} `;
+      inputValueFirst = NaN;
+      operator = operatorValue;
+    }
+  }
 };
 
 const handleEqual = () => {
-  if (isNaN(inputValue)) {
+  if (isNaN(inputValueSecond) & (inputValueSecond === "")) {
     outputResult[0].value = "Error";
   } else {
     switch (operator) {
       case "+":
-        outputResult[0].value = Number(preValue) + Number(inputValue);
+        outputResult[0].value = Number(preValue) + Number(inputValueSecond);
         break;
       case "-":
-        outputResult[0].value = Number(preValue) - Number(inputValue);
+        outputResult[0].value = Number(preValue) - Number(inputValueSecond);
         break;
       case "x":
-        outputResult[0].value = Number(preValue) * Number(inputValue);
+        outputResult[0].value = Number(preValue) * Number(inputValueSecond);
         break;
       case "÷":
-        outputResult[0].value = Number(preValue) / Number(inputValue);
+        outputResult[0].value = Number(preValue) / Number(inputValueSecond);
         break;
       default:
-        outputResult[0].value = preValue;
+        outputResult[0].value = Number(inputResult[0].value);
         break;
     }
     operator = "";
+    preValue = outputResult[0].value;
   }
 };
 // const doMath = (operator) => {
 //   switch (operator) {
 //     case "+":
-//       preValue += inputValue;
+//       preValue += inputValueFirst;
 //       break;
 //     case "-":
-//       preValue -= inputValue;
+//       preValue -= inputValueFirst;
 //       break;
 //     case "x":
-//       preValue *= inputValue;
+//       preValue *= inputValueFirst;
 //       break;
 //     case "÷":
-//       preValue /= inputValue;
+//       preValue /= inputValueFirst;
 //       break;
 //   }
 // };
